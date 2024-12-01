@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+{%block title%}
+Signup
+{%endblock%}
+
+{% block content %}
+<h3 style="color:rgb(241, 150, 193); margin-left: 450px; font-size:60px; margin-top: 20px;">BLISsTORE</h3>
+<form method="post" style="width:50%; margin-left:150px; margin-left: 290px;">
+    <input type="text" name="Firstname" class="form-control mb-3 mt-3" placeholder="Write your First name" style="height:50px; padding-bottom:10px;">
+    <input type="text" name="Lastname" class="form-control mb-3 mt-3" placeholder="Write your Last name" style="height:50px; padding-bottom:10px;">
+    <input type="text" name="email" class="form-control mb-3 mt-3" placeholder="Write your Email" style="height:50px; padding-bottom:10px;">
+    <input type="password" name="password" class="form-control" placeholder="Password"  style="height:50px; padding-bottom:10px; margin-bottom: 15px;">
+    <select class="form-select"name="sex" aria-label="Default select example">
+        <option selected>Choose your Sex</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+        <option value="3">Other</option>
+      </select>
+    <button type="submit" class="btn btn-success mt-3" style="margin-left: 240px; width: 150px; height:45px;border-radius:8px; background-color:rgb(241, 150, 193); border:none">Sign up</button>
+</form>
+{% with messages=get_flashed_messages(with_categories=True) %}
+    {% for category, msg in messages %}
+        <p class="{{category}}">{{msg}}</p>
+    {% endfor %}
+{% endwith %}
+{% endblock %}

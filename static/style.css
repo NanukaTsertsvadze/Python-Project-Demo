@@ -1,0 +1,23 @@
+
+body{
+    background-color: rgb(247, 239, 241);
+}
+.error{
+    color:red;
+    margin-left: 300px;
+    margin-top:10px;
+    font-weight: bold; 
+}
+.info{
+    color:green;
+    margin-left: 300px;
+    margin-top:10px;
+    font-weight: bold; 
+}
+.card{
+    padding:15px;
+}
+.btn {
+    background-color: rgb(249, 170, 183);
+    border:none;
+}
